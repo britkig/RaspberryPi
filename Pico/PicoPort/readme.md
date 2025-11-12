@@ -12,7 +12,7 @@ To define an input (replacing `PIN_NUMBER` with the GPIO pin number):
 
 PinInput MyInput(PIN_NUMBER [, false|true]);
 ```
-An optional second parameter can be provided to enable or disable interrupt handling; this is required for some calls listed below. Defaults to `true`.
+An optional second parameter can be provided to enable or disable interrupt handling on the pin; some function calls listed below may behave eratically without it. Defaults to `true`.
 
 The pin's state can be read without blocking by calling `Read`:
 ```c
