@@ -24,7 +24,7 @@ MyInput.WaitForState(false|true);
 ```
 **Note:**
 - Interrupt registering is required for this function to work, this is enabled by default unless explicitly disable in the pin's code declaration.
-- There may be a delay of detection of input state change through `WaitForState` when the CPU is put into a wait-for-interrupt state.
+- There may be a delay of detection of input state change through `WaitForState` while the CPU is a deep-sleep wait-for-interrupt state.
 
 ## Output Pin
 To define an input (replacing `PIN_NUMBER` with the GPIO pin number):
