@@ -5,7 +5,7 @@ private:
 	uint8_t _s,_c;
 public:
 	void SetResolution(uint8_t r) {
-		pwm_set_wrap(_s, r);
+		pwm_set_wrap(_s, r-1);
 	}
 	void Set(uint8_t d) {
 		pwm_set_chan_level(_s,_c,d);
