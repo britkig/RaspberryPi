@@ -74,7 +74,7 @@ MyPWM.SetResolution(0 ... 255);
 - Additionally, you should call `SetResolution` at least once in your code prior to any `Set` calls to ensure proper operation, as there is a quirk with the microcontroller's PWM registers that doesn't result in 100% duty time when both duty and resolution values are equal. As a workaround, you should set the resolution value to be one-less than the maximum duty time being used in your code.
 - Setting a duty time higher than the resolution value will result in the output being always on.
 - If using multiple PWM outputs, some pins share the same PWM resolution register, and calling `SetResolution` will affect all pins that share that register.
-- Unlike `PinOutput` due to hardware limitations, it is not possible to read the current value of PWM registers.
+- Unlike `PinOutput` due to hardware limitations, it is not possible to read the current values of PWM registers.
 
 ## Reset Pin
 To define a device reset pin (replacing `PIN_NUMBER` with the GPIO pin number):
