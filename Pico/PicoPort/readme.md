@@ -55,6 +55,7 @@ MyPWM.SetResolution(0 ... 255);
 - For maximum compatibility, only values between 0 and 255 (`uint8_t`) are accepted.
 - Additionally, you should call `SetResolution` at least once in your code prior to any `Set` calls to ensure proper operation, as there is a quirk with the microcontroller's PWM registers that doesn't result in 100% duty time when both duty and resolution values are equal. As a workaround, you should set the resolution value to be one-less than the maximum duty time being used in your code.
 - Setting a duty time higher than the resolution value will result in the output being always on.
+- If using multiple PWM outputs, some pins share the same PWM register, and calling `SetResolution` will affect all pins that share the same register.
 
 ## Design Notes
 For predictable behaviour, all pin declarations made using these libraries should be declared outside of any and all function blocks.
