@@ -1,0 +1,14 @@
+[Unit]
+AllowIsolate=false
+DefaultDependencies=false
+Description=Mount System Partitions as R/W
+IgnoreOnIsolate=true
+RefuseManualStart=true
+RefuseManualStop=true
+StopWhenUnneeded=true
+[Service]
+ExecStart=true
+RemainAfterExit=true
+Type=oneshot
+[Install]
+RequiredBy=all-rw.service apt-daily.service apt-daily-upgrade.service
