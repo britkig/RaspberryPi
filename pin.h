@@ -18,5 +18,5 @@ protected:
 #define PICOPORT_E {16,17,18,19}
 #define PICOPORT_EF {16,17,18,19,20,21,22,26}
 #define PICOPORT_F {20,21,22,26}
-//  WARNING: FG not defined due to not sharing sharing same physical or pin-count specs.
+//  WARNING: FG not defined due to not sharing same physical or pin-count specs.
 #define PICOPORT_G {27,28}
