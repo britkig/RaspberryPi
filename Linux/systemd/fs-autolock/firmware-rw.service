@@ -1,0 +1,16 @@
+[Unit]
+AllowIsolate=false
+ConditionPathIsMountPoint=/boot/firmware
+DefaultDependencies=false
+Description=Mount Boot Partition as R/W
+IgnoreOnIsolate=true
+RefuseManualStart=true
+RefuseManualStop=true
+StopWhenUnneeded=true
+[Service]
+ExecStart=mount -o remount,rw /boot/firmware
+ExecStop=mount -o remount,ro /boot/firmware
+RemainAfterExit=true
+Type=oneshot
+[Install]
+RequiredBy=system-rw.service
