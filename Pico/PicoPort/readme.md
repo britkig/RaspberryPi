@@ -31,6 +31,8 @@ And the output can be turned on or off by calling `Set`:
 ```c
 MyInput.Set(false|true);
 ```
+## Design Notes
+For predictable behaviour, all pin declarations made using these libraries should be declared outside of any and all function blocks.
 ## Tricks
 You can declare multiple pins of the same type by declaring an array instead of one per line, followed by the pin numbers, comma-separated, in curly-brackets:
 ```c
