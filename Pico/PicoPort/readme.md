@@ -25,7 +25,7 @@ To define an input (replacing `PIN_NUMBER` with the GPIO pin number):
 ```c
 #include "pin_output.h"
 
-PinOutput MyOutput(PIN_NUMBER [,state]);
+PinOutput MyOutput(PIN_NUMBER [,false|true]);
 ```
 The initial output state can also be set by providing as second, though optional, parameter of boolean (false = off, true = on); if omitted, defaults to false.
 
@@ -38,7 +38,7 @@ To define a PWM pin (replacing `PIN_NUMBER` with the GPIO pin number):
 ```c
 #include "pin_pwm.h"
 
-PinPWM MyPWM(PIN_NUMBER [,255]);
+PinPWM MyPWM(PIN_NUMBER [,0 ... 255]);
 ```
 The initial duty time can also be set by providing as second, though optional, parameter of an integer between 0 and 255; if omitted, defaults to zero (full off).
 
@@ -48,7 +48,7 @@ MyPWM.Set(0 ... 255);
 ```
 The time resolution can be adjusted by calling `SetResolution`:
 ```c
-MyPWM.SetResolution(0 .. 255);
+MyPWM.SetResolution(0 ... 255);
 ```
 
 **Notes:**
