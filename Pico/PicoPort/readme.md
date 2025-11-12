@@ -1,10 +1,11 @@
 # PicoPort
 This repository contains a set of libraries to simplify access to GPIO pins on the Raspberry Pi® Pico® series of microcontrollers by representing them as objects.
 
-## How it Works
+# How it Works
 These libraries use `struct` constructors to initialise pins before the `main` code block runs.
 
 [Basic Example](example.cpp)
+# Pin Types
 ## Input Pin
 To define an input (replacing `PIN_NUMBER` with the GPIO pin number):
 ```c
@@ -85,9 +86,9 @@ PinPWM MyPWM(PIN_NUMBER);
 ```
 This pin type does not expose any callable functions and operates passively once-declared.
 
-## Design Notes
+# Design Notes
 For predictable behaviour, all pin declarations made using these libraries should be declared outside of any and all function blocks.
-## Tricks
+# Tricks
 You can declare multiple pins of the same type by declaring an array instead of one per line, followed by the pin numbers, comma-separated, in curly-brackets:
 ```c
 PinOutPut MyOutputs[8]={0,1,2,3,4,5,6,7};
