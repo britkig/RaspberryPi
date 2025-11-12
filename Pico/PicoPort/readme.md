@@ -77,7 +77,7 @@ To define a device reset pin (replacing `PIN_NUMBER` with the GPIO pin number):
 
 PinPWM MyPWM(PIN_NUMBER);
 ```
-This pin type does not expose any function calls and operates passively once-declared.
+This pin type does not expose any callable functions and operates passively once-declared.
 
 ## Design Notes
 For predictable behaviour, all pin declarations made using these libraries should be declared outside of any and all function blocks.
