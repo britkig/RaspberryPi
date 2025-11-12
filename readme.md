@@ -28,7 +28,8 @@ To define an input (replacing `PIN_NUMBER` with the GPIO pin number):
 PinInput MyOutput(PIN_NUMBER);
 ```
 ## Tricks
-You can declare multiple pins of the same type by declaring an array, followed by the pin numbers, comma-separated, in curly-brackets:
+You can declare multiple pins of the same type by declaring an array instead of one per line, followed by the pin numbers, comma-separated, in curly-brackets:
 ```c
 PinOutPut MyOutputs[8]={0,1,2,3,4,5,6,7};
 ```
+The advantage of this approach is that you can iterate through them with loops.
