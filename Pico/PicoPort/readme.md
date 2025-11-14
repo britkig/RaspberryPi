@@ -77,15 +77,6 @@ MyPWM.SetResolution(0 ... 255);
 - If using multiple PWM outputs, some pins share the same PWM resolution register, and calling `SetResolution` will affect all pins that share that register.
 - Unlike `PinOutput` due to hardware limitations, it is not possible to read the current values of PWM registers.
 
-## Reset Pin
-To define a device reset pin (replacing `PIN_NUMBER` with the GPIO pin number):
-```c
-#include "pin_reset.h"
-
-PinPWM MyPWM(PIN_NUMBER);
-```
-This pin type does not expose any callable functions and operates passively once-declared.
-
 # Coding Considerations
 For predictable behaviour, all pin declarations made using these libraries should be declared outside of any and all function blocks.
 # Tricks
